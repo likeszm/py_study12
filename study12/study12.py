@@ -2,7 +2,7 @@
 """
 1.函数内部想操作全局变量需要global关键字声明
 2.传入参数的个数可变，通过列表（准确说是数组指针）来实现
-
+3.关键字可变参数: 通过双星号接收并存储为字典
 """
 
 #1.局部变量和全局变量
@@ -46,4 +46,13 @@ fun_output(*onebatch)
 """
 
 #3.关键字可变参数
+"""
+def test_fun( **dict ) :
+    print(type(dict))
+    for key, value in dict.items() :
+        print(f"key= {key}, value= {value}")
+
+test_fun(A = '0', B = '1', C = '2')
+"""
+
 
